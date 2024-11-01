@@ -1,0 +1,25 @@
+<%-- 
+    Created on : 9 oct. 2024
+    Author     : Julien Anglade
+--%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page pageEncoding="UTF-8" %>
+<header>
+    <h1>Administration du site (${sessionScope.person.name})</h1>
+    <nav>
+        <ul>
+            <!-- Section principale -->
+            <div class="nav-section left">
+                <li><a href="<c:url value="/back/home"/>">Accueil Admin</a></li>
+                <li><a href="<c:url value="/person/logout"/>">Se déconnecter</a></li>
+            </div>
+            <!-- Section gestion -->
+            <div class="nav-section center">
+                <li><a href="<c:url value="/back/story"/>">Gérer les nouvelles</a></li>
+                <li><a href="<c:url value="/back/persons"/>">Gérer les utilisateurs</a></li>
+                <li><a href="<c:url value="/back/comments"/>">Gérer les commentaires</a></li>
+            </div>
+        </ul>
+    </nav>
+</header>
